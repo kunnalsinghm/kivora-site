@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>Kivora · AI cost governance by Zuvoxia</title>
+<meta name="description" content="Kivora sees every AI token, cuts the waste and proves the savings. Join the pre-launch waitlist." />
+<meta property="og:title" content="Kivora · AI cost governance by Zuvoxia" />
+<meta property="og:description" content="See every token. Cut the waste. Prove the savings." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;600&family=Unbounded:wght@600;800&display=swap" rel="stylesheet" />
+<style>
+:root{--bg:#0a0615;--bg2:#120a26;--ink:#f6f2ff;--mute:#b3a9d1;--line:#2a1f4d;--violet:#8b5cf6;--pink:#ff4d8d;--cyan:#2de2e6;--sun:#ffd23f;
+--display:"Unbounded","Arial Black",system-ui,sans-serif;--body:"Bricolage Grotesque",system-ui,-apple-system,"Segoe UI",sans-serif;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+*,*::before,*::after{box-sizing:inherit}
+html{color-scheme:dark;scroll-behavior:smooth;scroll-padding-top:calc(76px + env(safe-area-inset-top,0px));height:auto}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.6 var(--body);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:30;background:rgba(10,6,21,.82);backdrop-filter:blur(12px)}
+body::after{content:"";position:fixed;inset:-20%;z-index:-1;pointer-events:none;background:radial-gradient(40% 35% at 15% 10%,rgba(139,92,246,.38),transparent 70%),radial-gradient(35% 30% at 90% 20%,rgba(255,77,141,.26),transparent 70%),radial-gradient(40% 40% at 60% 95%,rgba(45,226,230,.16),transparent 70%);animation:drift 18s ease-in-out infinite alternate}
+@keyframes drift{to{transform:translate3d(-3%,2%,0) scale(1.06)}}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--cyan);outline-offset:3px;border-radius:6px}
+.skip{position:absolute;left:-999px;top:8px;background:var(--cyan);color:#06222a;padding:8px 14px;border-radius:8px;z-index:50}.skip:focus{left:12px}
+.wrap{width:min(1120px,100% - 40px);margin:0 auto}
+h1,h2,h3{font-family:var(--display);line-height:1.08;margin:0;letter-spacing:-.02em}
+h2{font-size:clamp(28px,4.4vw,48px);font-weight:800;max-width:18ch}
+p{margin:0}
+.lead{color:var(--mute);font-size:clamp(17px,2vw,20px);max-width:52ch}
+.grad{background:linear-gradient(95deg,var(--pink),var(--violet) 40%,var(--cyan) 75%,var(--sun));background-size:220% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:shine 8s linear infinite}
+@keyframes shine{to{background-position:-220% 0}}
+
+/* nav */
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:40;background:rgba(10,6,21,.78);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;gap:22px;height:68px}
+.logo{font:800 20px var(--display);text-decoration:none;display:flex;align-items:center;gap:10px}
+.logo i{width:26px;height:26px;border-radius:8px;background:conic-gradient(from 200deg,var(--pink),var(--violet),var(--cyan),var(--pink));display:block}
+.logo small{font:400 13px var(--body);color:var(--mute);letter-spacing:0}
+nav ul{display:flex;gap:22px;list-style:none;margin:0 0 0 auto;padding:0}
+nav ul a{color:var(--mute);text-decoration:none;font-size:15px}nav ul a:hover{color:var(--ink)}
+.btn{display:inline-flex;align-items:center;gap:8px;border:0;cursor:pointer;font:600 16px var(--body);padding:13px 22px;border-radius:999px;color:#14052e;text-decoration:none;background:linear-gradient(95deg,var(--pink),var(--sun));box-shadow:0 8px 30px -8px rgba(255,77,141,.7);transition:transform .2s,box-shadow .2s}
+.btn:hover{transform:translateY(-2px);box-shadow:0 14px 36px -8px rgba(255,77,141,.85)}
+.btn.ghost{background:transparent;color:var(--ink);border:1px solid var(--line);box-shadow:none}.btn.ghost:hover{border-color:var(--violet)}
+.pill{font-size:13px;padding:4px 12px;border-radius:999px;border:1px solid var(--sun);color:var(--sun);white-space:nowrap}
+@media(max-width:820px){nav ul{display:none}nav .btn{margin-left:auto;padding:10px 16px;font-size:14px}.pill{display:none}}
+
+/* hero */
+.hero{padding:clamp(48px,9vw,110px) 0 70px}
+.hero .wrap{display:grid;grid-template-columns:1.05fr 1fr;gap:48px;align-items:center}
+.hero h1{font-size:clamp(38px,6.4vw,76px);font-weight:800}
+.hero .lead{margin:22px 0 30px}
+.cta{display:flex;gap:12px;flex-wrap:wrap;align-items:center}
+.note{color:var(--mute);font-size:14px;margin-top:16px}
+@media(max-width:900px){.hero .wrap{grid-template-columns:1fr}}
+.stage{position:relative;border:1px solid var(--line);border-radius:26px;background:linear-gradient(160deg,rgba(139,92,246,.14),rgba(10,6,21,.6));padding:18px;box-shadow:0 30px 80px -30px rgba(139,92,246,.6)}
+.stage::after{content:"";position:absolute;inset:0;border-radius:inherit;padding:1.5px;background:conic-gradient(from var(--a,0deg),transparent 0 70%,var(--cyan) 85%,transparent);-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude;animation:beam 7s linear infinite;pointer-events:none}
+@property --a{syntax:"<angle>";initial-value:0deg;inherits:false}@keyframes beam{to{--a:360deg}}
+.stage svg{display:block;width:100%;height:auto}
+.stage .cap{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;font-size:13px;color:var(--mute);padding:6px 6px 0}
+.cap b{color:var(--cyan);font-weight:600}
+svg text{font-family:var(--body);fill:#b3a9d1;font-size:12px}
+.px{fill:none;stroke-width:4;stroke-linecap:round}
+.run{stroke:var(--pink);stroke-dasharray:1;animation:run 9s ease-in-out infinite}
+.gov{stroke:var(--cyan);stroke-dasharray:1;animation:gov 9s ease-in-out infinite}
+.trip{transform-box:fill-box;transform-origin:center;animation:trip 9s ease-out infinite}
+.tag{animation:tag 9s ease-out infinite}
+@keyframes run{0%{stroke-dashoffset:1;opacity:1}32%{stroke-dashoffset:0;opacity:1}38%{opacity:.3}94%{stroke-dashoffset:0;opacity:.3}100%{stroke-dashoffset:0;opacity:0}}
+@keyframes gov{0%,30%{stroke-dashoffset:1;opacity:1}58%{stroke-dashoffset:0}94%{stroke-dashoffset:0;opacity:1}100%{stroke-dashoffset:0;opacity:0}}
+@keyframes trip{0%,29%{transform:scale(0);opacity:0}34%{transform:scale(1.7);opacity:1}42%{transform:scale(1)}94%{opacity:1}100%{opacity:0}}
+@keyframes tag{0%,33%{opacity:0;transform:translateY(6px)}42%,94%{opacity:1;transform:none}100%{opacity:0}}
+
+/* sections */
+section{padding:clamp(64px,9vw,112px) 0}
+.problem{border-block:1px solid var(--line);background:linear-gradient(180deg,transparent,rgba(139,92,246,.06))}
+.cols{display:grid;grid-template-columns:repeat(3,1fr);gap:34px;margin-top:44px}
+.cols h3{font-size:19px;margin-bottom:10px;color:var(--sun)}.cols p{color:var(--mute)}
+@media(max-width:860px){.cols{grid-template-columns:1fr;gap:26px}}
+.mods{display:grid;grid-template-columns:repeat(6,1fr);gap:18px;margin-top:46px}
+.mod{position:relative;padding:28px;border-radius:24px;border:1px solid var(--line);background:var(--bg2);overflow:hidden;transition:border-color .25s,transform .25s}
+.mod:hover{border-color:var(--c);transform:translateY(-4px)}
+.mod::before{content:"";position:absolute;width:260px;height:260px;right:-80px;top:-100px;background:radial-gradient(closest-side,var(--c),transparent);opacity:.28;transition:opacity .3s}.mod:hover::before{opacity:.5}
+.mod h3{font-size:30px;color:var(--c)}.mod .tagline{font-weight:600;margin:6px 0 14px}.mod p,.mod li{color:var(--mute);font-size:15.5px}
+.mod ul{padding-left:18px;margin:14px 0 0}.mod li{margin:5px 0}
+.m1{--c:var(--cyan);grid-column:span 3}.m2{--c:var(--pink);grid-column:span 3}.m3{--c:var(--sun);grid-column:span 6;display:grid;grid-template-columns:1fr 1fr;gap:30px;align-items:center}
+@media(max-width:860px){.m1,.m2,.m3{grid-column:span 6}.m3{grid-template-columns:1fr}}
+.vis{margin-top:22px;display:grid;gap:10px}
+.bar{height:10px;border-radius:99px;background:var(--line);overflow:hidden}.bar i{display:block;height:100%;width:var(--w);border-radius:inherit;background:var(--c);animation:fill 2.4s ease-out both;transform-origin:left}
+@keyframes fill{from{transform:scaleX(0)}}
+.bar.hot i{background:linear-gradient(90deg,var(--sun),var(--pink))}
+.lbl{display:flex;justify-content:space-between;font-size:13px;color:var(--mute)}
+.ladder{display:flex;justify-content:space-between;position:relative;margin-top:6px}
+.ladder::before{content:"";position:absolute;left:8px;right:8px;top:7px;height:2px;background:var(--line)}
+.ladder span{position:relative;font-size:12px;color:var(--mute);text-align:center}.ladder span::before{content:"";display:block;width:16px;height:16px;border-radius:50%;background:var(--bg2);border:2px solid var(--line);margin:0 auto 6px}
+.ladder .on::before{background:var(--c);border-color:var(--c)}.ladder .now::before{box-shadow:0 0 0 5px rgba(255,77,141,.28);animation:ping 2s infinite}
+@keyframes ping{50%{box-shadow:0 0 0 9px rgba(255,77,141,0)}}
+.flow{display:flex;flex-wrap:wrap;gap:8px;align-items:center;font:500 13px ui-monospace,Menlo,Consolas,monospace}
+.flow span{padding:6px 11px;border-radius:8px;border:1px solid var(--line);background:#0d0720}.flow .k{border-color:var(--sun);color:var(--sun)}.flow .g{border-color:var(--cyan);color:var(--cyan)}
+
+/* how it works */
+.steps{counter-reset:s;list-style:none;margin:46px 0 0;padding:0;display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.steps li{counter-increment:s;position:relative;padding:20px 20px 20px 66px;border:1px solid var(--line);border-radius:18px;background:var(--bg2);font-weight:600}
+.steps li::before{content:counter(s);position:absolute;left:18px;top:16px;width:34px;height:34px;border-radius:50%;display:grid;place-items:center;font:800 14px var(--display);color:#14052e;background:linear-gradient(135deg,var(--pink),var(--cyan))}
+.steps li small{display:block;font-weight:400;color:var(--mute);font-size:14px;margin-top:2px}
+@media(max-width:860px){.steps{grid-template-columns:1fr}}
+
+/* trust */
+.trust{display:grid;grid-template-columns:1fr 1.2fr;gap:56px;align-items:start}
+@media(max-width:860px){.trust{grid-template-columns:1fr;gap:30px}}
+.checks{list-style:none;padding:0;margin:0;display:grid;gap:18px}
+.checks li{padding-left:34px;position:relative}.checks li::before{content:"";position:absolute;left:0;top:7px;width:18px;height:18px;border-radius:6px;background:linear-gradient(135deg,var(--cyan),var(--violet))}
+.checks b{display:block}.checks span{color:var(--mute);font-size:15.5px}
+
+/* faq + cta */
+details{border-bottom:1px solid var(--line);padding:20px 0}summary{cursor:pointer;font:600 19px var(--body);list-style:none;display:flex;justify-content:space-between;gap:16px}
+summary::-webkit-details-marker{display:none}summary::after{content:"+";color:var(--pink);font-size:26px;line-height:1;transition:transform .25s}details[open] summary::after{transform:rotate(45deg)}
+details p{color:var(--mute);margin-top:12px;max-width:62ch}
+.faq{max-width:780px;margin-top:34px}
+.join{text-align:center;border:1px solid var(--line);border-radius:34px;padding:clamp(40px,7vw,80px) 24px;background:radial-gradient(60% 90% at 50% 0%,rgba(255,77,141,.22),transparent 70%),var(--bg2)}
+.join h2{margin:0 auto;max-width:16ch}.join .lead{margin:18px auto 30px}
+form{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
+input{font:400 17px var(--body);color:var(--ink);background:#0a0615;border:1px solid var(--line);border-radius:999px;padding:13px 22px;min-width:min(340px,100%)}
+input::placeholder{color:#8a80ab}input:focus{outline:none;border-color:var(--cyan);box-shadow:0 0 0 4px rgba(45,226,230,.2)}
+#msg{min-height:24px;margin-top:14px;font-size:15px;color:var(--cyan)}
+footer{padding:44px 0 60px;border-top:1px solid var(--line);color:var(--mute);font-size:14.5px}
+footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}.run,.gov{stroke-dashoffset:0}.run{opacity:.3}.trip,.tag{opacity:1;transform:none}.bar i{transform:none}}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<nav aria-label="Primary"><div class="wrap">
+  <a class="logo" href="#top" aria-label="Kivora home"><i></i>Kivora <small>by Zuvoxia</small></a>
+  <ul><li><a href="#modules">Modules</a></li><li><a href="#how">How it works</a></li><li><a href="#trust">Trust</a></li><li><a href="#faq">FAQ</a></li></ul>
+  <span class="pill">Pre-launch</span>
+  <a class="btn" href="#join">Join the waitlist</a>
+</div></nav>
+
+<main id="main">
+<header class="hero" id="top"><div class="wrap">
+  <div>
+    <h1>Your AI bill, <span class="grad">under control.</span></h1>
+    <p class="lead">Kivora sees every token your teams and agents spend, cuts the waste, and proves the savings. It stops a runaway agent before the invoice does.</p>
+    <div class="cta"><a class="btn" href="#join">Join the waitlist</a><a class="btn ghost" href="#how">See how it works</a></div>
+    <p class="note">Kivora is in pre-launch. Early access opens to the waitlist first.</p>
+  </div>
+  <figure class="stage" style="margin:0" aria-label="Animated chart: a runaway cost curve is caught by a policy and held under budget">
+    <svg viewBox="0 0 600 320" role="img" aria-label="Illustration of AI spend over a month">
+      <g stroke="#2a1f4d" stroke-width="1"><path d="M20 60H580M20 130H580M20 200H580M20 270H580"/></g>
+      <path d="M20 118H580" stroke="#ffd23f" stroke-width="1.5" stroke-dasharray="6 6"/>
+      <text x="26" y="108" style="fill:#ffd23f">monthly budget</text>
+      <path class="px run" pathLength="1" d="M20 262C110 256 190 246 270 214S372 78 440 28 520 8 566 6"/>
+      <path class="px gov" pathLength="1" d="M20 262C110 256 190 246 270 214S322 160 372 142 480 128 566 124"/>
+      <circle class="trip" cx="372" cy="142" r="9" fill="#ffd23f"/>
+      <g class="tag"><rect x="262" y="160" rx="10" width="206" height="46" fill="#120a26" stroke="#2de2e6"/><text x="276" y="180" style="fill:#2de2e6;font-weight:600">Policy tripped</text><text x="276" y="197">agent paused, cost held</text></g>
+      <text x="26" y="300">day 1</text><text x="540" y="300">day 30</text>
+    </svg>
+    <figcaption class="cap"><span>Illustrative demo, not customer data</span><b>Runaway spend caught, budget held</b></figcaption>
+  </figure>
+</div></header>
+
+<section class="problem" aria-labelledby="p-h"><div class="wrap">
+  <h2 id="p-h">AI spend grows faster than anyone can track it.</h2>
+  <div class="cols">
+    <div><h3>No owner on the bill</h3><p>Calls arrive untagged. Finance sees one number. Nobody can say which team, model or agent drove it.</p></div>
+    <div><h3>Agents don’t stop themselves</h3><p>A retry loop or a stuck agent burns money all weekend. The alert lands after the invoice.</p></div>
+    <div><h3>Savings are claims, not proof</h3><p>A cheaper model is a guess until you measure quality and compare against what was actually spent.</p></div>
+  </div>
+</div></section>
+
+<section id="modules" aria-labelledby="m-h"><div class="wrap">
+  <h2 id="m-h">Three modules. One governed AI budget.</h2>
+  <p class="lead" style="margin-top:16px">Use them together or start with the one that hurts most.</p>
+  <div class="mods">
+    <article class="mod m1">
+      <h3>Guard</h3><p class="tagline">See and control spend.</p>
+      <p>Track cost by team, model and day. Set budgets that warn at 50%, 80% and 90%, and flag the moment you pass 100%.</p>
+      <div class="vis" aria-hidden="true">
+        <div class="lbl"><span>team:support</span><span>86%</span></div><div class="bar hot" style="--w:86%"><i></i></div>
+        <div class="lbl"><span>team:growth</span><span>62%</span></div><div class="bar" style="--w:62%"><i></i></div>
+      </div>
+      <ul><li>Proxy or ingest API, so you change one base URL</li><li>Anomaly alerts for new models and spend spikes</li><li>Shadow-spend check against your provider’s billing CSV</li></ul>
+    </article>
+    <article class="mod m2">
+      <h3>Compass</h3><p class="tagline">Cut cost, then prove it.</p>
+      <p>Caches repeat requests, routes simple work to cheaper models, and rolls changes out in stages with quality checks first.</p>
+      <div class="vis" aria-hidden="true"><div class="ladder"><span class="on">Off</span><span class="on">1%</span><span class="on now">5%</span><span>25%</span><span>50%</span><span>100%</span></div></div>
+      <ul><li>Exact and semantic caching</li><li>Evidence gate before any wide rollout, with one-click rollback</li><li>Verified savings checked against the spend Guard actually saw</li></ul>
+    </article>
+    <article class="mod m3">
+      <div><h3>Autopilot</h3><p class="tagline">Govern and act, with a human in the loop.</p>
+      <p>Policies you write in plain YAML watch spend and agent health. Low-risk actions run on their own. Anything bigger waits in an approval queue, and every step lands in the audit log.</p>
+      <ul><li>Circuit breaker pauses a runaway agent immediately</li><li>Forecasts flag teams heading over budget</li><li>Approve, reject or roll back from one queue</li></ul></div>
+      <div class="vis" aria-hidden="true"><div class="flow"><span>retry_rate ≥ 0.35</span><span class="k">→ policy match</span><span>pause_agent</span><span class="g">approved</span></div><div class="flow"><span>forecast over budget</span><span class="k">→ approval</span><span>downgrade_to</span><span class="g">rollback ready</span></div></div>
+    </article>
+  </div>
+</div></section>
+
+<section id="how" aria-labelledby="h-h" style="background:linear-gradient(180deg,transparent,rgba(45,226,230,.05),transparent)"><div class="wrap">
+  <h2 id="h-h">Every action follows the same nine steps.</h2>
+  <p class="lead" style="margin-top:16px">No silent changes. You can read back exactly why anything happened.</p>
+  <ol class="steps">
+    <li>Observe<small>Collect usage, spend and agent signals</small></li>
+    <li>Classify<small>Work out what kind of event it is</small></li>
+    <li>Assess risk<small>Score how much could go wrong</small></li>
+    <li>Recommend<small>Pick the cheapest safe response</small></li>
+    <li>Check policy<small>Match against your written rules</small></li>
+    <li>Request approval<small>Ask a human when the rule says so</small></li>
+    <li>Execute<small>Act, or hold if blocked</small></li>
+    <li>Verify<small>Confirm the result and the savings</small></li>
+    <li>Record evidence<small>Write it to the audit log</small></li>
+  </ol>
+</div></section>
+
+<section id="trust" aria-labelledby="t-h"><div class="wrap trust">
+  <div><h2 id="t-h">Savings you can audit.</h2><p class="lead" style="margin-top:16px">Kivora treats a claimed saving as a hypothesis until the numbers agree.</p></div>
+  <ul class="checks">
+    <li><b>Ledger versus observed spend</b><span>Compass’s savings ledger is compared with the drop Guard actually measured, and flagged when they disagree.</span></li>
+    <li><b>Evidence before rollout</b><span>A cheaper model needs enough evaluation samples before it goes past a small canary, or a named person overrides with a reason.</span></li>
+    <li><b>Roles, SSO and tenants</b><span>Role-based access, single sign-on and separate tenants for teams that need them.</span></li>
+    <li><b>An audit trail for every action</b><span>Who approved what, when, and why, kept as evidence.</span></li>
+    <li><b>Your data stays in your database</b><span>The dashboard escapes all server data and runs under a strict content security policy.</span></li>
+  </ul>
+</div></section>
+
+<section id="faq" aria-labelledby="f-h" style="padding-top:0"><div class="wrap">
+  <h2 id="f-h">Questions, answered.</h2>
+  <div class="faq">
+    <details><summary>How do we connect it?</summary><p>Point your SDK’s base URL at the Kivora proxy, or send usage events to the ingest API. Provider support starts with OpenAI, Anthropic and Amazon Bedrock.</p></details>
+    <details><summary>Will it change my model outputs?</summary><p>Only if you approve it. Savings recommendations are cost-only estimates until quality is tested, and rollouts go 1%, 5%, 25%, 50%, 100% with rollback at every step.</p></details>
+    <details><summary>Can it act without asking me?</summary><p>You decide. Policies mark which actions need approval. The circuit breaker is the exception: it pauses a runaway agent immediately and logs why.</p></details>
+    <details><summary>When does Kivora launch, and what does it cost?</summary><p>Kivora is pre-launch. Dates and pricing aren’t announced yet. Join the waitlist and you’ll hear first.</p></details>
+  </div>
+</div></section>
+
+<section id="join" style="padding-top:0"><div class="wrap"><div class="join">
+  <h2>Be first in when Kivora opens.</h2>
+  <p class="lead">Tell us where to reach you. We’ll write when early access is ready, and not before.</p>
+  <form id="f"><label class="sr" for="em" style="position:absolute;left:-999px">Work email</label><input id="em" type="email" required placeholder="you@company.com" autocomplete="email" /><button class="btn" type="submit">Join the waitlist</button></form>
+  <p id="msg" role="status" aria-live="polite"></p>
+</div></div></section>
+</main>
+
+<footer><div class="wrap"><span><b style="color:var(--ink)">Kivora</b> is built by Zuvoxia.</span><span>© <span id="y">2026</span> Zuvoxia. Pre-launch.</span></div></footer>
+
+<script>
+// Set CONTACT to the address that should receive waitlist sign-ups.
+const CONTACT = "hello@zuvoxia.com";
+document.getElementById("y").textContent = new Date().getFullYear();
+document.getElementById("f").addEventListener("submit", (e) => {
+  e.preventDefault();
+  const email = document.getElementById("em").value.trim();
+  const subject = encodeURIComponent("Kivora waitlist");
+  const body = encodeURIComponent("Please add me to the Kivora waitlist: " + email);
+  document.getElementById("msg").textContent = "Opening your email app to send the request…";
+  window.location.href = "mailto:" + CONTACT + "?subject=" + subject + "&body=" + body;
+});
+</script>
+</body>
+</html>

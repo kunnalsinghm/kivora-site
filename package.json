@@ -1,0 +1,24 @@
+{
+  "name": "zuvoxia-site",
+  "version": "1.1.0",
+  "private": true,
+  "description": "Kivora marketing site and waitlist API (Zuvoxiae)",
+  "main": "server/index.js",
+  "scripts": {
+    "start": "node --env-file-if-exists=.env server/index.js",
+    "dev": "node --watch --env-file-if-exists=.env server/index.js",
+    "test": "node --test"
+  },
+  "engines": {
+    "node": ">=22.13"
+  },
+  "dependencies": {
+    "express": "^4.21.0",
+    "helmet": "^8.0.0",
+    "nodemailer": "^10.5.0",
+    "pg": "^8.13.0"
+  },
+  "devDependencies": {
+    "pg-mem": "^3.0.5"
+  }
+}

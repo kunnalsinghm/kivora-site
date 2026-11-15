@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Waitlist admin · Kivora</title><meta name="robots" content="noindex, nofollow" />
+<link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Manrope:wght@700;800&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="/css/styles.css" /></head>
+<body>
+<header class="site-header"><div class="container bar"><a class="brand" href="/"><img class="brand-mark" src="/img/kivora-mark.svg" width="32" height="32" alt="" /><span>Kivora</span><small>waitlist admin</small></a></div></header>
+<main class="doc"><div class="container admin">
+  <h1>Early-access requests</h1>
+  <p class="sub">Enter the admin token you set as <code>ADMIN_TOKEN</code>. It stays in this tab only and is never saved.</p>
+  <form id="admin-form" class="admin-bar" novalidate>
+    <label class="sr" for="token">Admin token</label>
+    <input id="token" type="password" autocomplete="off" placeholder="Admin token" />
+    <button class="btn btn-primary" type="submit">Load requests</button>
+    <button class="btn btn-ghost" type="button" id="csv" disabled>Download CSV</button>
+  </form>
+  <p id="admin-msg" class="admin-msg" role="status" aria-live="polite"></p>
+  <div class="table-wrap"><table id="tbl" hidden><thead><tr><th>#</th><th>Received</th><th>Email</th><th>Company</th><th>Role</th><th>AI spend</th><th>Providers</th><th>Notes</th></tr></thead><tbody></tbody></table></div>
+</div></main>
+<script src="/js/admin.js"></script>
+</body></html>
