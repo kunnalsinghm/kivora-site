@@ -4,16 +4,16 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Kivora · AI cost governance platform by Zuvoxiae</title>
-<meta name="description" content="Kivora shows what your AI actually costs by team and model, cuts the waste safely, and proves the savings. Request early access." />
+<meta name="description" content="Kivora Guard shows what your AI costs by team and model, warns you before a budget is crossed, and checks your spend against your provider invoices. Request early access." />
 <meta name="theme-color" content="#0B1B2B" />
 <meta property="og:type" content="website" />
 <meta property="og:title" content="Kivora · AI cost governance platform" />
-<meta property="og:description" content="See every token. Cut the waste safely. Prove the savings." />
+<meta property="og:description" content="See every token. Set budgets. Catch overspend before the invoice." />
 <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
 <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Manrope:wght@700;800&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="/css/styles.css" />
 </head>
 <body>
@@ -38,22 +38,22 @@
     <div class="container hero-grid">
       <div>
         <p class="badge">Early access · Pre-launch</p>
-        <h1>Know what your AI costs. Control it. <span class="accent">Prove the savings.</span></h1>
-        <p class="lead">Kivora is the cost-governance platform for teams running AI in production. See every token by team and model, cut the waste safely, and show finance savings that hold up.</p>
+        <h1>Know what your AI costs. Control it. <span class="accent">Never be surprised by the bill.</span></h1>
+        <p class="lead">Kivora is the cost-governance platform for teams running AI in production. Its first product, Guard, shows every token by team and model, warns you before a budget is crossed, and checks your spend against your provider’s invoice.</p>
         <div class="actions">
           <a class="btn btn-primary btn-lg" href="#access">Request early access</a>
           <a class="btn btn-ghost btn-lg" href="#how">See how it works</a>
         </div>
-        <p class="status-note"><b>Where we are, honestly:</b> Kivora Guard is built and tested in simulation. It isn’t verified on live providers yet, has no customers, and isn’t publicly available.</p>
+        <p class="status-note"><b>Now onboarding design partners.</b> Guard is built and tested in simulation. Next, we verify it on live provider accounts together with our first partners.</p>
       </div>
 
       <div class="mock" role="img" aria-label="Illustrative preview of the Kivora spend dashboard">
         <div class="mock-top"><span class="dots"><i></i><i></i><i></i></span><b>Spend overview</b><em>Illustrative data</em></div>
         <div class="kpis">
           <div><small>Spend this month</small><strong data-count="48210" data-prefix="$">$48,210</strong><span class="chip chip-amber">4.2% above last month</span></div>
-          <div><small>Verified savings</small><strong class="pos" data-count="6940" data-prefix="$">$6,940</strong><span class="chip">after overhead</span></div>
+          <div><small>Left in budget</small><strong class="pos" data-count="11790" data-prefix="$">$11,790</strong><span class="chip">of $60,000</span></div>
         </div>
-        <div class="curve" role="img" aria-label="Animated chart: a runaway cost curve is caught by a policy and held under the monthly budget">
+        <div class="curve" role="img" aria-label="Animated chart: a runaway cost curve triggers a budget alert and is brought back under the monthly budget">
           <svg viewBox="0 0 600 230">
             <defs><linearGradient id="gv" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0B7A5F" stop-opacity=".22"/><stop offset="1" stop-color="#0B7A5F" stop-opacity="0"/></linearGradient></defs>
             <path class="grid-l" d="M20 40H580M20 120H580M20 200H580"/>
@@ -62,7 +62,7 @@
             <path class="cv cv-run" pathLength="1" d="M20 196C110 192 190 184 270 160S372 56 440 24 520 10 576 8"/>
             <path class="cv cv-gov" pathLength="1" d="M20 196C110 192 190 184 270 160S322 126 372 112 480 102 576 98"/>
             <circle class="cv-pt" cx="372" cy="112" r="8" fill="#D97706"/>
-            <g class="cv-tag"><rect x="318" y="134" rx="8" width="210" height="44" fill="#fff" stroke="#0B7A5F"/><text x="332" y="153" style="fill:#0B7A5F;font-weight:600">Policy tripped</text><text x="332" y="169">Agent paused, spend held</text></g>
+            <g class="cv-tag"><rect x="318" y="134" rx="8" width="210" height="44" fill="#fff" stroke="#0B7A5F"/><text x="332" y="153" style="fill:#0B7A5F;font-weight:600">Budget alert sent</text><text x="332" y="169">Team acts, spend held</text></g>
             <text x="20" y="222">Day 1</text><text x="544" y="222">Day 30</text>
           </svg>
         </div>
@@ -71,7 +71,7 @@
           <li><span>Growth</span><div class="meter"><i style="--w:62%"></i></div><b>62%</b></li>
           <li><span>Platform</span><div class="meter"><i style="--w:31%"></i></div><b>31%</b></li>
         </ul>
-        <p class="alert"><span class="pulse"></span>Policy paused agent-7 · retry rate reached 42%</p>
+        <p class="alert"><span class="pulse"></span>Alert sent · support team at 86% of budget</p>
       </div>
     </div>
   </section>
@@ -81,8 +81,8 @@
       <h2>AI spend grows faster than anyone can track it</h2>
       <div class="three">
         <div><h3>No owner on the bill</h3><p>Calls arrive untagged and finance sees one number. Nobody can say which team, model or agent drove it.</p></div>
-        <div><h3>Agents don’t stop themselves</h3><p>A retry loop or a stuck agent can burn budget all weekend. The alert arrives after the invoice does.</p></div>
-        <div><h3>Savings are claims, not proof</h3><p>A cheaper model is a guess until quality is measured and the result is checked against what was actually spent.</p></div>
+        <div><h3>Overspend is found too late</h3><p>A retry loop or a stuck agent can burn budget all weekend. The alert arrives after the invoice does.</p></div>
+        <div><h3>Invoices and usage don’t line up</h3><p>Provider bills rarely match what your team tracked, and nobody can say which gap is a price mismatch and which is spend no one can explain.</p></div>
       </div>
     </div>
   </section>
@@ -109,10 +109,11 @@
       <article class="row">
         <div class="copy">
           <h3>Guard<span>See and control spend</span></h3><p class="stage">Built · tested in simulation</p>
-          <p>Track cost by team, model and day. Set budgets that warn at 50%, 80% and 90% of the limit, and flag the moment one is passed.</p>
-          <ul><li>Change one base URL, or send usage to the ingest API</li><li>Alerts for new models and unusual spend</li><li>Compare tracked spend with your provider’s billing export</li></ul>
+          <p>Guard sits in the request path, so it does more than report. Track cost by team, model and day, then set budgets that warn at 50%, 80% and 90%, and that downgrade to a cheaper model or block the request when the limit is reached.</p>
+          <ul><li>Change one base URL, or send usage to the ingest API</li><li>Budgets that downgrade or block, plus quarantine for a suspicious key</li><li>Personal data redacted and known prompt-injection phrases blocked</li><li>Forecasts and alerts for new models and unusual spend</li><li>Every request recorded once, with a safety file so a bill is never lost</li><li>Reconcile against your provider’s billing export, and export in FOCUS format</li></ul>
         </div>
         <div class="panel" aria-hidden="true">
+          <p class="illus">Illustrative data</p>
           <div class="p-row"><span>team: support</span><b>$2,580 / $3,000</b></div><div class="meter"><i class="warn" style="--w:86%"></i></div>
           <div class="p-row"><span>team: growth</span><b>$3,100 / $5,000</b></div><div class="meter"><i style="--w:62%"></i></div>
           <div class="p-row"><span>Billing export check</span><b class="chip chip-amber">1 gap flagged</b></div>
@@ -121,11 +122,12 @@
 
       <article class="row flip">
         <div class="copy">
-          <h3>Compass<span>Cut cost, then prove it</span></h3><p class="stage">In development</p>
+          <h3>Compass<span>Cut cost, then prove it</span></h3><p class="stage">Working prototype · real-traffic trial next</p>
           <p>Caches repeat requests, routes simple work to cheaper models, and rolls changes out in stages after quality checks.</p>
           <ul><li>Exact-match and semantic caching</li><li>An evidence gate before any wide rollout, and one-click rollback</li><li>Savings checked against the spend Guard actually measured</li></ul>
         </div>
         <div class="panel" aria-hidden="true">
+          <p class="illus">Illustrative data</p>
           <div class="p-row"><span>Claimed by ledger</span><b>$6,940</b></div><div class="meter"><i style="--w:100%"></i></div>
           <div class="p-row"><span>Observed spend drop</span><b>$6,610</b></div><div class="meter"><i class="blue" style="--w:95%"></i></div>
           <div class="ladder"><span class="on">Off</span><span class="on">1%</span><span class="on now">5%</span><span>25%</span><span>50%</span><span>100%</span></div>
@@ -135,11 +137,12 @@
 
       <article class="row">
         <div class="copy">
-          <h3>Autopilot<span>Govern and act, with people in control</span></h3><p class="stage">In development</p>
+          <h3>Autopilot<span>Govern and act, with people in control</span></h3><p class="stage">Early prototype · demo on simulated data</p>
           <p>Policies you write in plain YAML watch spend and agent health. Low-risk actions run on their own, and bigger ones wait for approval.</p>
           <ul><li>A circuit breaker pauses a runaway agent immediately</li><li>Forecasts flag teams heading over budget</li><li>Approve, reject or roll back from one queue, with a full audit log</li></ul>
         </div>
         <div class="panel" role="group" aria-label="Approval queue demo">
+          <p class="illus">Illustrative demo</p>
           <div class="q"><div><b>downgrade_to economical model</b><small>Policy: protect-support-budget</small></div><button class="mini" type="button" data-demo-approve>Approve</button></div>
           <div class="q"><div><b>pause_agent support-triage</b><small>Policy: stop-agent-loop</small></div><span class="chip">Executed · can roll back</span></div>
           <div class="q"><div><b>notify team-owner</b><small>Forecast over budget</small></div><span class="chip">Executed</span></div>
@@ -154,7 +157,7 @@
       <ol class="three steps">
         <li><h3>Connect</h3><p>Point your SDK at the Kivora proxy, or send usage events to the ingest API. No agent to install.</p></li>
         <li><h3>Observe</h3><p>Cost appears by team, model and day, with budgets and alerts set against the real numbers.</p></li>
-        <li><h3>Govern</h3><p>Turn on recommendations and policies. Every action is checked, approved if needed, and logged.</p></li>
+        <li><h3>Stay ahead</h3><p>Budgets warn your team as spend climbs, and Guard flags new models and unusual spend, so surprises show up before the invoice does.</p></li>
       </ol>
     </div>
   </section>
@@ -170,7 +173,7 @@
           <ul><li>Unlimited members</li><li>Gateway proxy with streaming</li><li>Agent attribution, roles and SSO</li><li>Audit logs and reconciliation</li><li>Priority support</li></ul></article>
         <article class="plan"><span class="tag">Compass</span><h3>Outcome-based</h3><p class="amt">15–20%<small> of verified savings</small></p>
           <ul><li>A share of the savings Kivora verifies</li><li>Checked against the spend drop actually observed</li></ul></article>
-        <article class="plan"><span class="tag">Autopilot</span><h3>Pilot first</h3><p class="amt">$5–15k<small>/month</small></p>
+        <article class="plan"><span class="tag">Autopilot</span><h3>Pilot first</h3><p class="amt">Talk to us</p>
           <ul><li>Policy-governed automation with an approval queue</li><li>Circuit breaker, forecasts and audit trail</li><li>Starts with a pilot conversation</li></ul></article>
       </div>
     </div>
@@ -179,12 +182,12 @@
   <section id="integrations" class="integ">
     <div class="container">
       <h2>Where integrations stand</h2>
-      <p class="sub">Stated plainly. Nothing here has been verified against live provider accounts yet.</p>
+      <p class="sub">What Guard connects to.</p>
       <div class="integ-grid">
-        <div><h3>Built and tested in simulation</h3>
+        <div><h3>Built for</h3>
           <ul class="badges">
             <li><b>OpenAI</b><small>Model provider</small></li><li><b>Anthropic</b><small>Model provider</small></li>
-            <li><b>Amazon Bedrock</b><small>Model provider</small></li><li><b>Self-hosted models</b><small>Model provider</small></li>
+            <li><b>Self-hosted models</b><small>Model provider</small></li>
             <li><b>Email, Slack, webhooks</b><small>Alert delivery</small></li><li><b>OpenID Connect</b><small>Single sign-on</small></li>
           </ul></div>
         <div><h3>Planned</h3>
@@ -202,8 +205,8 @@
       <div class="truth">
         <div><h3>Built into the product</h3><ul>
           <li>Role-based access and OpenID Connect single sign-on</li><li>Tenant separation for teams that need it</li>
-          <li>An audit log of approvals and actions</li><li>Personal-data redaction before storage</li>
-          <li>Rollback for executed actions that can be reversed</li><li>An evidence gate: a cheaper model needs enough test samples before a wide rollout, or a named override with a reason</li><li>Strict content security policy, with server data escaped before display</li></ul></div>
+          <li>An audit log of actions</li><li>Personal-data redaction before storage</li>
+          <li>Strict content security policy, with server data escaped before display</li></ul></div>
         <div><h3>Not yet finalised</h3><ul>
           <li>Compliance certification: none is claimed at this stage</li><li>Data residency and hosting options</li>
           <li>Default data-retention windows</li><li>Sub-processor list</li><li>Independent security review: not done yet</li></ul></div>
@@ -215,25 +218,22 @@
     <div class="container">
       <h2>About Kivora</h2>
       <p class="sub">Kivora is built by Zuvoxiae. AI bills arrive as one number, and we’re working on making them explainable: where the spend goes, who or what caused it, and how to stay within budget.</p>
-      <p class="founders"><a href="https://www.linkedin.com/in/kunal-sm-41a055285/" target="_blank" rel="noopener noreferrer">Kunal S M</a><span aria-hidden="true">·</span><a href="https://www.linkedin.com/in/vidhi-sharma-prof/" target="_blank" rel="noopener noreferrer">Vidhi Sharma</a></p>
-      <div class="status-box"><h3>Where we are, honestly</h3><p>Our first product, Kivora Guard, is built and tested in simulation. It isn’t verified on live providers, has no customers yet, and isn’t publicly available.</p></div>
-      <p class="story">If your team has been surprised by an AI bill, or you work in product or TPM and have advice for someone starting out, let’s connect: <a href="mailto:connect.kivora@gmail.com">connect.kivora@gmail.com</a>.</p>
+      <div class="founders">
+        <article class="founder"><span class="avatar" aria-hidden="true">V</span><div><h3>Vidhi Sharma</h3><p class="role">Co-founder, Go-to-market</p><a class="li" href="https://www.linkedin.com/in/vidhi-sharma-prof/" target="_blank" rel="noopener noreferrer" aria-label="Vidhi Sharma on LinkedIn (opens in a new tab)">LinkedIn ↗</a></div></article>
+        <article class="founder"><span class="avatar" aria-hidden="true">K</span><div><h3>Kunal.sm</h3><p class="role">Co-founder, Product and Engineering</p><a class="li" href="https://www.linkedin.com/in/kunal-sm-41a055285/" target="_blank" rel="noopener noreferrer" aria-label="Kunal.sm on LinkedIn (opens in a new tab)">LinkedIn ↗</a></div></article>
+      </div>
+      <p class="story">Questions, or want to be a design partner? Write to <a href="mailto:connect.kivora@gmail.com">connect.kivora@gmail.com</a>.</p>
     </div>
   </section>
 
   <section id="faq" class="faq">
     <div class="container narrow">
       <h2>Frequently asked questions</h2>
-      <details><summary>How do we connect Kivora?</summary><p>Point your SDK’s base URL at the Kivora proxy, or send usage events to the ingest API. Kivora Guard is built for OpenAI, Anthropic and Amazon Bedrock traffic and has been tested in simulation. Verifying it on live provider accounts is the next step.</p></details>
-      <details><summary>Will it change our model outputs?</summary><p>Only if you approve it. Savings recommendations are cost-only estimates until quality is tested, and rollouts move in stages with rollback at every step.</p></details>
-      <details><summary>Can it act without asking us?</summary><p>You decide. Policies mark which actions need approval. The circuit breaker is the exception: it pauses a runaway agent immediately and logs why.</p></details>
-      <details><summary>When does Kivora launch, and what will it cost?</summary><p>Kivora is in pre-launch and there is no public launch date yet. Planned pricing is shown on this page and isn’t final. Request early access and we’ll contact you first.</p></details>
-      <details><summary>Can Kivora change routing without asking us?</summary><p>Kivora can apply policy-approved changes, such as downgrading a model tier when a budget threshold is crossed. Each policy states whether a person must approve the action first.</p></details>
-      <details><summary>Are changes reversible?</summary><p>Executed actions are logged as evidence, and reversible ones can be rolled back. How a rollback works depends on the action type.</p></details>
-      <details><summary>How are savings measured?</summary><p>Verified savings are realised savings minus optimisation overhead, checked against the spend drop Kivora actually observed. Estimates that haven’t happened yet are shown separately as unrealised.</p></details>
+      <details><summary>How do we connect Kivora?</summary><p>Point your SDK’s base URL at the Kivora proxy, or send usage events to the ingest API. Kivora Guard is built for OpenAI and Anthropic traffic, and can also track self-hosted models.</p></details>
+      <details><summary>Will Kivora change anything without asking us?</summary><p>Guard enforces the budgets you set. When a team crosses its limit, Guard downgrades requests to a cheaper model you have approved, or blocks them if there is nothing cheaper, and says which rule did it. A key that behaves abnormally can be slowed down (quarantined) until someone reviews it. Nothing else changes on its own. Features that act beyond budgets, such as Autopilot, are in development: you choose which actions need approval, every executed action is logged, and reversible ones can be rolled back. The one exception we plan is a circuit breaker that pauses a runaway agent immediately and logs why.</p></details>
+      <details><summary>When does Kivora launch, and what will it cost?</summary><p>Kivora is in pre-launch and there is no public launch date yet. Planned pricing for Guard is shown on this page and isn’t final. Request early access and we’ll contact you first.</p></details>
       <details><summary>Is Kivora SOC 2 or otherwise certified?</summary><p>Kivora is pre-launch and doesn’t claim any compliance certification at this stage.</p></details>
       <details><summary>Does Kivora cover cloud or Kubernetes cost?</summary><p>No. Kivora attributes AI request traffic by model, agent and team. It does not cover container or cloud-infrastructure billing.</p></details>
-      <details><summary>Who is Kivora for right now?</summary><p>Engineering and platform teams running production AI workloads across more than one model provider, without a dedicated internal cost-allocation system yet.</p></details>
     </div>
   </section>
 
@@ -256,12 +256,6 @@
       <form id="waitlist-form" novalidate>
         <div class="field"><label for="email">Work email</label><input id="email" name="email" type="email" autocomplete="email" required placeholder="you@company.com" /></div>
         <div class="field"><label for="company">Company <span>(optional)</span></label><input id="company" name="company" type="text" autocomplete="organization" maxlength="120" /></div>
-                <div class="field"><label for="role">Your role <span>(optional)</span></label><select id="role" name="role"><option value="">Select…</option><option>Engineering / Platform</option><option>FinOps / Finance</option><option>Security / Compliance</option><option>Leadership</option><option>Other</option></select></div>
-        <div class="field"><label for="spend">Monthly AI spend <span>(optional)</span></label><select id="spend" name="spend_range"><option value="">Select…</option><option>Under $1k</option><option>$1k–$10k</option><option>$10k–$50k</option><option>$50k+</option><option>Not sure</option></select></div>
-        <fieldset class="field"><legend>Providers you use <span>(optional)</span></legend><div class="pills">
-          <label class="pill"><input type="checkbox" name="providers" value="OpenAI" /><span>OpenAI</span></label><label class="pill"><input type="checkbox" name="providers" value="Anthropic" /><span>Anthropic</span></label>
-          <label class="pill"><input type="checkbox" name="providers" value="Amazon Bedrock" /><span>Amazon Bedrock</span></label><label class="pill"><input type="checkbox" name="providers" value="Google" /><span>Google</span></label>
-          <label class="pill"><input type="checkbox" name="providers" value="Self-hosted" /><span>Self-hosted</span></label><label class="pill"><input type="checkbox" name="providers" value="Other" /><span>Other</span></label></div></fieldset>
         <div class="field"><label for="notes">What are you trying to fix? <span>(optional)</span></label><textarea id="notes" name="notes" rows="3" maxlength="500"></textarea></div>
         <div class="hp" aria-hidden="true"><label>Leave this empty<input name="website" type="text" tabindex="-1" autocomplete="off" /></label></div>
         <button class="btn btn-primary btn-lg" type="submit">Request early access</button>
@@ -274,8 +268,8 @@
 <footer class="site-footer">
   <div class="container foot">
     <div><a class="foot-logo" href="/"><img src="/img/zuvoxiae-mark.png" width="38" height="28" alt="" /><b>Zuvoxiae</b></a><p>Kivora is AI cost governance, built by Zuvoxiae.</p></div>
-    <div><b>Product</b><a href="#product">Guard, Compass, Autopilot</a><a href="#how">How it works</a><a href="#pricing">Planned pricing</a><a href="#security">Security</a></div>
-    <div><b>Company</b><a href="#about">About</a><a href="mailto:connect.kivora@gmail.com">connect.kivora@gmail.com</a><a href="https://www.instagram.com/zuvoxiea/" target="_blank" rel="noopener noreferrer">Instagram</a><a href="https://www.linkedin.com/in/kunal-sm-41a055285/" target="_blank" rel="noopener noreferrer">Kunal S M (LinkedIn)</a><a href="https://www.linkedin.com/in/vidhi-sharma-prof/" target="_blank" rel="noopener noreferrer">Vidhi Sharma (LinkedIn)</a></div>
+    <div><b>Product</b><a href="#product">Products</a><a href="#how">How it works</a><a href="#pricing">Planned pricing</a><a href="#security">Security</a></div>
+    <div><b>Company</b><a href="#about">About</a><a href="mailto:connect.kivora@gmail.com">connect.kivora@gmail.com</a><a href="https://www.instagram.com/zuvoxiea/" target="_blank" rel="noopener noreferrer">Instagram</a></div>
   </div>
   <div class="container legal">© <span id="year">2026</span> Zuvoxiae. Kivora is in pre-launch. · <a href="/privacy">Privacy</a> · <a href="/terms">Terms</a></div>
 </footer>

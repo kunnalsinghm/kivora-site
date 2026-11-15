@@ -4,11 +4,13 @@ Marketing site plus a small waitlist API for **Kivora, the AI cost-governance pl
 
 ```
 zuvoxia-site/
-  server/index.js     Express server: static files, strict CSP, rate-limited waitlist API, CSV export
-  server/db.js        SQLite storage (node:sqlite, built in, no native build)
-  public/index.html   The page
-  public/css/styles.css
-  public/js/main.js   Mobile menu + waitlist form
+  server/index.js     Local Express server: static files, strict CSP, the same handlers Vercel runs
+  api/                Vercel serverless functions (waitlist, admin/session, admin/waitlist, health, sitemap, robots)
+  lib/handlers.js     Request handlers (waitlist, admin sign-in, list, delete)
+  lib/auth.js         Admin accounts (scrypt) and signed login cookies
+  lib/store.js        Postgres (Neon) on Vercel, SQLite file locally
+  scripts/hash-password.js   Makes an admin account entry (npm run admin:hash)
+  public/             The site: index.html, admin.html, css/, js/
   .env.example        Copy to .env
 ```
 
@@ -28,13 +30,22 @@ Open http://127.0.0.1:3000. Check the API with `curl http://127.0.0.1:3000/api/h
 
 `POST /api/waitlist` with `{ "email": "...", "company": "..." }`. Emails are validated, de-duplicated, stored in `data/waitlist.db`, and rate-limited (8 attempts per 15 minutes per IP). A hidden `website` field catches simple bots.
 
-To download sign-ups, set `ADMIN_TOKEN` in `.env` (a long random string), restart, then:
+## Admin (sign-ups, delete, CSV)
 
-```powershell
-curl -H "x-admin-token: YOUR_TOKEN" http://127.0.0.1:3000/api/admin/waitlist.csv -o waitlist.csv
-```
+`/admin` is a sign-in page for the people you choose. It is switched off until both of these are set:
 
-If `ADMIN_TOKEN` is empty the export is disabled.
+1. `ADMIN_USERS`: one or more `email:hash` entries, separated by commas. Make an entry with:
+
+   ```powershell
+   npm run admin:hash
+   ```
+
+   It asks for an email and a password (at least 12 characters, hidden as you type) and prints the entry. The password itself is never stored. Run it once per person.
+2. `SESSION_SECRET`: at least 32 random characters, from `node -e "console.log(require('crypto').randomBytes(32).toString('hex'))"`. Changing it signs everyone out.
+
+Once signed in you can view sign-ups, download a CSV, and delete entries (deleting asks for confirmation and cannot be undone). Sessions last 8 hours. After 5 wrong passwords from one address, sign-in is blocked for 15 minutes. Every delete is written to the host's logs with the admin's email and the entry number.
+
+To remove someone's access, delete their entry from `ADMIN_USERS`. To change a password, make a new entry with `npm run admin:hash` and replace the old one.
 
 ## Before you go live
 
@@ -49,8 +60,8 @@ If `ADMIN_TOKEN` is empty the export is disabled.
 1. Push this folder to a GitHub repository (`.env`, `node_modules` and `data/` are git-ignored on purpose).
 2. On vercel.com choose **Add New > Project**, import the repository, and keep the defaults (`vercel.json` sets everything).
 3. In the project, open **Storage > Create Database > Neon (Postgres)** and connect it. Vercel adds `DATABASE_URL` for you.
-4. In **Settings > Environment Variables** add: `ADMIN_TOKEN` (a long random string), `IP_SALT` (any random string), `GMAIL_USER` (`connect.kivora@gmail.com`) and `GMAIL_APP_PASSWORD`.
-5. Redeploy. Sign-ups are saved in the database, emailed to you, and visible at `/admin` (enter your `ADMIN_TOKEN`).
+4. In **Settings > Environment Variables** add: `ADMIN_USERS` and `SESSION_SECRET` (see Admin above), `IP_SALT` (a long random string), `GMAIL_USER` (`connect.kivora@gmail.com`) and `GMAIL_APP_PASSWORD`.
+5. Redeploy. Sign-ups are saved in the database, emailed to you, and visible at `/admin` (sign in with the account you made).
 
 **Gmail app password:** turn on 2-Step Verification for the Google account, then create an App Password at https://myaccount.google.com/apppasswords and paste the 16 characters (no spaces) as `GMAIL_APP_PASSWORD`. Without it, sign-ups are still saved, you just don't get the email.
 

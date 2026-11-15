@@ -2,21 +2,30 @@
 <html lang="en"><head><meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Waitlist admin · Kivora</title><meta name="robots" content="noindex, nofollow" />
 <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Manrope:wght@700;800&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="/css/styles.css" /></head>
 <body>
 <header class="site-header"><div class="container bar"><a class="brand" href="/"><img class="brand-mark" src="/img/kivora-mark.svg" width="32" height="32" alt="" /><span>Kivora</span><small>waitlist admin</small></a></div></header>
 <main class="doc"><div class="container admin">
   <h1>Early-access requests</h1>
-  <p class="sub">Enter the admin token you set as <code>ADMIN_TOKEN</code>. It stays in this tab only and is never saved.</p>
-  <form id="admin-form" class="admin-bar" novalidate>
-    <label class="sr" for="token">Admin token</label>
-    <input id="token" type="password" autocomplete="off" placeholder="Admin token" />
-    <button class="btn btn-primary" type="submit">Load requests</button>
-    <button class="btn btn-ghost" type="button" id="csv" disabled>Download CSV</button>
+
+  <form id="login-form" class="admin-bar admin-login" hidden novalidate>
+    <label class="sr" for="email">Email</label>
+    <input id="email" type="email" autocomplete="username" placeholder="Admin email" maxlength="254" />
+    <label class="sr" for="password">Password</label>
+    <input id="password" type="password" autocomplete="current-password" placeholder="Password" maxlength="200" />
+    <button class="btn btn-primary" type="submit">Sign in</button>
   </form>
+
+  <div id="panel" class="admin-bar" hidden>
+    <span id="who" class="admin-who"></span>
+    <button class="btn btn-ghost" type="button" id="refresh">Refresh</button>
+    <button class="btn btn-ghost" type="button" id="csv">Download CSV</button>
+    <button class="btn btn-ghost" type="button" id="logout">Sign out</button>
+  </div>
+
   <p id="admin-msg" class="admin-msg" role="status" aria-live="polite"></p>
-  <div class="table-wrap"><table id="tbl" hidden><thead><tr><th>#</th><th>Received</th><th>Email</th><th>Company</th><th>Role</th><th>AI spend</th><th>Providers</th><th>Notes</th></tr></thead><tbody></tbody></table></div>
+  <div class="table-wrap"><table id="tbl" hidden><thead><tr><th>#</th><th>Received</th><th>Email</th><th>Company</th><th>Role</th><th>AI spend</th><th>Providers</th><th>Notes</th><th><span class="sr">Actions</span></th></tr></thead><tbody></tbody></table></div>
 </div></main>
 <script src="/js/admin.js"></script>
 </body></html>

@@ -2,7 +2,7 @@
 const path = require("node:path");
 const express = require("express");
 const helmet = require("helmet");
-const { waitlistHandler, adminListHandler, sitemapHandler, robotsHandler } = require("../lib/handlers");
+const { waitlistHandler, adminSessionHandler, adminWaitlistHandler, sitemapHandler, robotsHandler } = require("../lib/handlers");
 
 const app = express();
 const PORT = Number(process.env.PORT) || 3000;
@@ -20,12 +20,12 @@ app.use(express.json({ limit: "10kb" }));
 
 app.get("/api/health", (_req, res) => res.json({ ok: true }));
 app.post("/api/waitlist", (req, res) => waitlistHandler(req, res));
-app.get("/api/admin/waitlist", (req, res) => adminListHandler(req, res));
-app.get("/api/admin/waitlist.csv", (req, res) => { req.url = "/api/admin/waitlist?format=csv"; adminListHandler(req, res); }); // old URL still works
+app.all("/api/admin/session", (req, res) => adminSessionHandler(req, res));
+app.all("/api/admin/waitlist", (req, res) => adminWaitlistHandler(req, res));
 app.get("/robots.txt", robotsHandler);
 app.get("/sitemap.xml", sitemapHandler);
 
-app.use(express.static(path.join(__dirname, "..", "public"), { extensions: ["html"], maxAge: "1h" }));
-app.use((_req, res) => res.status(404).sendFile(path.join(__dirname, "..", "public", "index.html")));
+app.use(express.static(path.join(__dirname, "..", "public"), { extensions: ["html"], maxAge: 0 })); // no caching, so edits show on refresh (Vercel serves the live site)
+app.use((_req, res) => res.status(404).sendFile(path.join(__dirname, "..", "public", "404.html")));
 
 app.listen(PORT, HOST, () => console.log(`Kivora site running at http://${HOST}:${PORT}`));

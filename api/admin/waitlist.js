@@ -1,1 +1,1 @@
-module.exports = require("../../lib/handlers").adminListHandler;
+module.exports = require("../../lib/handlers").adminWaitlistHandler;
