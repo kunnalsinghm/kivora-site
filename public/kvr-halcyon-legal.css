@@ -1,0 +1,15 @@
+/* Shared by privacy.html, terms.html and 404.html. Loaded after kvr-halcyon-x7q9.css (colours, fonts, header, buttons). */
+.ld{padding:140px 0 96px;min-height:calc(100vh - 150px)}
+.ld .w{max-width:860px}
+.ld h1{font-size:clamp(44px,7vw,84px);max-width:none}
+.ld .meta{margin:18px 0 44px;color:var(--slate);font-size:17px;max-width:60ch}
+.secs{counter-reset:s}
+.secs h2{counter-increment:s;display:grid;grid-template-columns:56px 1fr;align-items:baseline;font-size:clamp(26px,3.2vw,34px);line-height:1.15;max-width:none;margin-top:0;padding-top:26px;border-top:1px solid var(--rule)}
+.secs h2::before{content:counter(s,decimal-leading-zero);font:400 18px var(--serif);color:var(--ruby)}
+.secs p{margin:10px 0 34px 56px;color:var(--slate);font-size:17px;max-width:62ch}
+.secs a{color:var(--ruby)}
+@media(max-width:600px){.secs h2{grid-template-columns:40px 1fr}.secs p{margin-left:40px}}
+.nf{display:flex;align-items:center}
+.c404{font:400 clamp(110px,24vw,260px)/.9 var(--serif);color:var(--ruby);letter-spacing:-.04em;margin-bottom:8px}
+.lf{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+footer a{color:#C7CEDB}
