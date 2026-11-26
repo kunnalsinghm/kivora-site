@@ -63,11 +63,12 @@ kivora-site/
     kvr-halcyon-legal.css    Small extra styles for privacy, terms and 404
     privacy.html  terms.html  404.html
     admin.html  js/admin.js  Private sign-in and sign-up list (older styling, see Admin)
-    favicon.svg  apple-touch-icon.png
-    css/styles.css  js/main.js  img/   Left over from the previous design (see note below)
+    favicon.svg  apple-touch-icon.png  og-image.png     Browser tab icon, iOS home-screen icon, social-share image
+    img/kivora-logo.png  kivora-logo-light.png  kivora-mark.svg  kivora-mark.png   The Kivora logo files (see Logo)
+    css/styles.css  js/main.js         Left over from the previous design (see note below)
 ```
 
-> **Old design files.** `public/css/styles.css`, `public/js/main.js` and `public/img/` belong to the previous homepage. `admin.html` may still use `styles.css`, and `backup/public-index-before-halcyon.html` needs all of them to work if you roll back. Check before deleting anything.
+> **Old design files.** `public/css/styles.css` and `public/js/main.js` belong to the previous homepage. `admin.html` may still use `styles.css`, and `backup/public-index-before-halcyon.html` needs all of them to work if you roll back. Check before deleting anything.
 
 ---
 
@@ -132,7 +133,27 @@ All numbers in the charts, bars and demos are **illustrative** and labelled as s
 - **Fonts:** Instrument Serif for headlines and large numbers, Geist for everything else. Both load from Google Fonts, which is the only outside resource the site allows.
 - **Shape:** sharp corners (2px at most), thin rules, a numbered left margin on each section, no card grids and no decorative gradients.
 - **Colour meaning is consistent:** ink is normal, blue is cached, ochre is downgraded, ruby is a limit or a block. Keep it that way in any new chart.
-- **Logo:** an inline SVG in the header and footer: a vertical bar and a ruby chevron. The same artwork is in `favicon.svg` and `apple-touch-icon.png`.
+- **Logo:** see the next section. The logo's blue-to-violet gradient is the only blue and violet on the site; everything else uses the palette above.
+
+### Logo
+
+The official logo is a blue-to-violet rounded square with a white K and arrow, next to a navy "Kivora" wordmark and a grey "by Zuvoxiae" line.
+
+| File | Use |
+| --- | --- |
+| `public/img/kivora-logo.png` | Full logo (transparent) for light backgrounds: site header and the legal pages |
+| `public/img/kivora-logo-light.png` | Full logo with a white wordmark for dark backgrounds: the footer |
+| `public/img/kivora-mark.svg` | The icon alone, as a sharp vector. Also used by `admin.html` |
+| `public/img/kivora-mark.png` | The icon alone, 512 px, transparent |
+| `public/favicon.svg` | Browser tab icon (same vector) |
+| `public/apple-touch-icon.png` | 180 px full-square icon for iOS home screens |
+| `public/og-image.png` | 1200 x 630 social-share image (logo on the page background) |
+
+Rules:
+- Use the light version on dark backgrounds and the normal one on light ones. Do not recolour, stretch, rotate or add effects.
+- Keep clear space around the logo at least equal to the height of the K.
+- The icon vector was rebuilt from the original artwork and checked against it pixel by pixel. The wordmark files are PNG, so keep them at their current size or smaller and let the browser scale down.
+- `index.html` points `og:image` at `https://kivora-site-mu.vercel.app/og-image.png`. **Change that address when the site gets its final domain**, or sharing previews will break.
 
 ---
 
@@ -380,8 +401,8 @@ The site is pre-launch and must stay honest:
 
 - [ ] Have a qualified person review `privacy.html` and `terms.html`. Update them whenever data collection changes.
 - [ ] Switch the public contact address to a domain email when you have one.
-- [ ] Set `SITE_URL` to the final address, and add a canonical tag and a social-share image (`og:image`) to `index.html`.
+- [ ] Set `SITE_URL` to the final address, add a canonical tag, and update the `og:image` address in `index.html` to the final domain.
 - [ ] Confirm sign-up alerts work (see the deploy checklist) and that someone reads the inbox.
 - [ ] Decide which Vercel project owns the public domain and remove the other if it is not needed.
 - [ ] Back up the sign-ups. Neon holds them in production; `data/waitlist.db` is local only.
-- [ ] Remove the old-design files once you are sure you will not roll back (`public/css/styles.css`, `public/js/main.js`, `public/img/`, `backup/`), after checking `admin.html` does not use them.
+- [ ] Remove the old-design files once you are sure you will not roll back (`public/css/styles.css`, `public/js/main.js`, `backup/`), after checking `admin.html` does not use them.

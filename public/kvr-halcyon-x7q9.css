@@ -134,7 +134,7 @@ summary{font:400 26px/1.2 var(--serif);cursor:pointer;list-style:none;display:fl
 details p{margin-top:12px;color:var(--slate);max-width:68ch}.faq{margin-top:40px}
 .cta{background:var(--ruby);color:#fff;border-color:var(--ruby)}.cta .rail{color:#FFD0DA}.cta .rail b{color:#fff}.cta h2 em{color:#fff;text-decoration:underline;text-underline-offset:8px}.cta p.l{color:#FFE2E8}
 .cta form{display:grid;gap:14px;margin-top:8px}.cta label{display:grid;gap:6px;font-size:14.5px}
-.cta input,.cta textarea{font:16px var(--sans);padding:13px 14px;border:1px solid #fff;background:#fff;color:var(--ink);border-radius:0}.cta textarea{min-height:90px;resize:vertical}
+.cta input:not([type=checkbox]),.cta textarea,.cta select{font:16px var(--sans);padding:13px 14px;border:1px solid #fff;background:#fff;color:var(--ink);border-radius:0;width:100%}.cta textarea{min-height:90px;resize:vertical}
 .cta .btn{background:var(--ink);justify-self:start}.cta .btn::before{background:#fff}.cta .btn:hover{color:var(--ink)}.ok{font-weight:500}
 .cg{display:grid;grid-template-columns:1fr 1fr;gap:clamp(24px,5vw,72px)}@media(max-width:860px){.cg{grid-template-columns:1fr}}
 footer{background:var(--obs);color:#9AA3B5;padding:64px 0 36px;font-size:14.5px}.fg{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:32px}@media(max-width:800px){.fg{grid-template-columns:1fr 1fr}}
@@ -147,3 +147,15 @@ footer h4{font:500 14px var(--sans);color:#fff;margin-bottom:10px}footer .fg a{d
 .ring{transform-box:fill-box;transform-origin:center;animation:ring 1.8s infinite}
 }
 @media(prefers-reduced-motion:reduce){.cells i{animation:none;opacity:1;transform:none}.ch .ln{transition:none}}
+
+.hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+.two2{display:grid;grid-template-columns:1.4fr 1fr;gap:14px;align-items:end}.two2 select{font-size:15px;padding-right:8px}@media(max-width:560px){.two2{grid-template-columns:1fr}}
+.cta fieldset{border:0;padding:0;margin:0;display:grid;gap:8px}.cta legend{font-size:14.5px;margin-bottom:8px;padding:0}
+.pv{display:flex;flex-wrap:wrap;gap:8px}.pv label{display:inline-flex;align-items:center;gap:8px;border:1px solid #fff;padding:8px 12px;font-size:14px;cursor:pointer}
+.pv input{width:auto;accent-color:#0D0F14;margin:0}.pv label:has(input:checked){background:#fff;color:var(--ink)}
+.ok.err{background:#fff;color:#8A0F2B;padding:8px 12px;display:inline-block}
+
+/* Logo images (header and footer) */
+.logo img{display:block;height:50px;width:auto}
+footer .logo img{height:52px}
+@media(max-width:560px){.logo img{height:42px}}
